@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
-/////////////////////////////////////////////////////////////////////////1
-/*
+
 class Program
 {
-    static void Main()
+    public static void Main(string[] args)
+    {
+        Ex1();
+        //Ex2();
+        //Ex3();
+    }
+
+    static void Ex1()
     {
         string filePath = @"C:\кпи\ОП\toLab1.txt";
 
@@ -36,7 +42,6 @@ class Program
         }
         return charList;
     }
-
     static int CountVowels(List<char> list)
     {
         int count = 0;
@@ -52,7 +57,6 @@ class Program
 
         return count;
     }
-
     static int CountConsonants(List<char> list)
     {
         int count = 0;
@@ -67,17 +71,9 @@ class Program
         }
         return count;
     }
-}
-*/
 
-
-/////////////////////////////////////////////////////////////////////////2
-/*
-class Program
-{
-    public static void Main(string[] args)
+    static void Ex2()
     {
-
         List<KeyValuePair<string, string>> inputList = new List<KeyValuePair<string, string>>() 
         {
             new KeyValuePair<string, string>("V", "S001"),
@@ -103,15 +99,7 @@ class Program
 
         File.WriteAllText(filePath2, result);
     }
-}
-*/
-
-
-/////////////////////////////////////////////////////////////////////////3
-/*
-class Program
-{    
-    static void Main()
+    static void Ex3()
     {
         Random random= new Random();
         int D = random.Next(-10,10);
@@ -123,8 +111,8 @@ class Program
             Console.WriteLine(num);
         }
         var selectedNumb = from p in A
-                             where p.ToString().EndsWith(D.ToString())
-                             select p;
+            where p.ToString().EndsWith(D.ToString())
+            select p;
         
         List<int> Numbers = new List<int>();
         foreach (int c in selectedNumb)
@@ -137,6 +125,6 @@ class Program
         }
         else
             Console.WriteLine("The answer: 0");
-    }  
+    }
 }
-*/
+
