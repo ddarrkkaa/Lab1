@@ -3,8 +3,8 @@ class Program
 {
     public static void Main(string[] args)
     {
-        Ex1();
-        //Ex2();
+        //Ex1();
+        Ex2();
         //Ex3();
     }
 
@@ -91,7 +91,7 @@ class Program
         Console.WriteLine("UniqueValues: {" + string.Join(", ", uniqueValues) + "}");
 
         string result = JsonConvert.SerializeObject(uniqueValues);
-        string filePath2 = @"C:\кпи\ОП\toLab1(2).txt";
+        string filePath2 = @"C:\кпи\ОП\new.json";
 
         File.WriteAllText(filePath2, result);
     }
